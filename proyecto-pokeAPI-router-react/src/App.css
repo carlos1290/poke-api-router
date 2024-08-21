@@ -1,42 +1,104 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Estilos para la barra de navegación lateral */
+nav {
+  background-color: #252525;  /* Fondo oscuro */
+  padding: 15px;
+  border-radius: 10px;  /* Bordes suaves */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra suave para efecto de profundidad */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+nav ul {
+  list-style: none;
+  padding: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+nav ul li {
+  margin-bottom: 15px;
+}
+
+nav ul li a {
+  color: #ffffff;  /* Texto blanco */
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #ffcc00, #ff6600);  /* Fondo degradado para los enlaces */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: translateY(-3px);  /* Efecto de elevación */
+  box-shadow: 0 8px 16px rgba(255, 204, 0, 0.6);  /* Sombra más intensa al pasar el mouse */
+}
+
+/* Estilos para el contenido principal */
+div[style*="flex: 1"] {
+  background-color: #1f1f1f;  /* Fondo oscuro para el contenido */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra suave */
+}
+
+/* Títulos del Pokémon */
+h2 {
+  font-size: 28px;
+  color: #ffcc00;  /* Color temático de Pikachu */
+  text-transform: uppercase;
+  letter-spacing: 2px;  /* Espaciado para un aspecto más moderno */
+  margin-bottom: 20px;
+}
+
+/* Párrafos */
+p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #dddddd;  /* Texto gris claro */
+}
+
+/* Listas */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* Imágenes del Pokémon */
+img {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border: 2px solid #ffcc00;  /* Borde amarillo inspirado en Pikachu */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.1);  /* Efecto de zoom al pasar el mouse */
+}
+
+/* Estilos para el mensaje de error */
+p[style*="error"] {
+  color: #ff5555;  /* Rojo brillante para errores */
+  font-weight: bold;
+}
+
+/* Estilos para el mensaje de carga */
+p[style*="Cargando"] {
+  font-style: italic;
+  color: #ffcc00;
+  animation: pulse 2s infinite;  /* Animación de pulso para el texto */
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    opacity: 0.5;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  100% {
+    opacity: 1;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
